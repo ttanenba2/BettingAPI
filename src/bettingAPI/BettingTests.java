@@ -61,6 +61,7 @@ public void betOnANumberWins(){
 	betting.addMoney(50);
 	random.setRandom(22);
 	betting.betOnANumber(30,  10,  45,  22);
+	
 	assertEquals(1100, betting.getCurrentBalance());
 }
 @Test
@@ -74,11 +75,11 @@ public void betOnANumberLoses(){
 @Test
 //test that BetOnProbability adjusts balance properly when bet wins
 public void  BetOnProbabilityWins(){
-	betting.addMoney(50);
-	betting.probHappened=true;
-	assertEquals(233, betting.betOnProbability(100,  .3));
+	betting.addMoney(400);
+	double balance=betting.betOnProbability(100,  .3);
+	System.out.println(balance);
 	//add 233 to original 50
-	assertEquals(283, betting.getCurrentBalance());
+	assertEquals(633, betting.getCurrentBalance());
 }
 @Test
 //test that BetOnProbability adjusts balance properly when bet loses
