@@ -5,7 +5,10 @@ public class randomGenerator implements random{
 public randomGenerator(){
 	this.random=new Random();
 }
-public int getRandom(int i){
+public int getRandom(){
 	return random.nextInt();
+}
+public int getRandom(int max, int min){
+	return random.nextInt(max-min+1)+min;
 }
 }

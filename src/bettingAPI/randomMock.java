@@ -5,7 +5,13 @@ public class randomMock implements random{
 public randomMock(){
 	
 }
-public int getRandom(int i){
-	return i;
+public int getRandom(){
+	return random;
+}
+public int getRandom(int max, int min){
+	return random;
+}
+public void setRandom(int i){
+	random=i;
 }
 }
